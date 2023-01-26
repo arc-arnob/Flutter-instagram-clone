@@ -60,7 +60,35 @@ class _LoginScreenState extends State<LoginScreen> {
               height: 24,
             ),
             // button Login
+            InkWell(
+                onTap: () {},
+                child: Container(
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  padding: const EdgeInsets.symmetric(vertical: 12),
+                  decoration: const ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(4))),
+                      color: blueColor),
+                  child: const Text("Log in"),
+                )),
+            Flexible(flex: 2, child: Container()),
             // Transition to sign up
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(vertical: 8),
+                  child: const Text("Don't have an account?"),
+                ),
+                GestureDetector(
+                    onTap: () {},
+                    child: const Text(
+                      "Sign Up.",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
+              ],
+            )
           ],
         ),
       ),
